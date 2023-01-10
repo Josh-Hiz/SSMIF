@@ -1,4 +1,4 @@
-with open("Part1-2/Aliens/logic_input.txt", 'r') as f:
+with open("logic_input.txt", 'r') as f:
     lines = [entry.strip() for entry in f.readlines()]
 
 def part1():

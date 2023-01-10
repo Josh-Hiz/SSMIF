@@ -1,7 +1,10 @@
-import pandas_datareader.data as dr
+import pandas_datareader as dr
 import pandas as pd
 import numpy as np
 from scipy import stats
+import yfinance as yf
+
+yf.pdr_override()
 
 # Names of individual stocks
 cocacolaStock = 'KO'
@@ -151,7 +154,7 @@ def capm():
     alpha = expectedReturn - riskFreeReturn - beta*(marketReturn - riskFreeReturn)
     
     print("a). The beta of a stock is a measure of a stocks volatility in relation to the overall market. High-beta stocks are much riskier but provide \n    a higher return potential. Low beta stocks pose less risk but also lower returns. a beta above 1 is more volatile \n    than the market but expect higher return. A beta below 1 has a lower stock volatility, and expects less return. \n    The beta for Tesla is: " + str(beta) + '\n')
-    print("b). The alpha measures the amount that the investment hgas returned in comparison to the market index or any other broad benchmark its comopared \n    Alpha generally shows how well or poor a stock has performed in comparison to the benchmark. Generally high alphas \n    are always preferred. Due to the fact I am using a Capital Asset Pricing Model, the formula for alpha used is the \n    return - risk free rate - the beta * (expected market return - risk free rate), the alpha yeilded is zero, \n    therefore the alpha of Tesla is: " + str(alpha) + ". An alpha of zero means that the stock has performed in line with the market. ")
+    print("b). The alpha measures the amount that the investment has returned in comparison to the market index or any other broad benchmark its compared \n    Alpha generally shows how well or poor a stock has performed in comparison to the benchmark. Generally high alphas \n    are always preferred. Due to the fact I am using a Capital Asset Pricing Model, the formula for alpha used is the \n    return - risk free rate - the beta * (expected market return - risk free rate), the alpha yeilded is zero, \n    therefore the alpha of Tesla is: " + str(alpha) + ". An alpha of zero means that the stock has performed in line with the market. ")
 
 #Main method to make printing more formatted 
 def main():

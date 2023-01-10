@@ -1,8 +1,9 @@
 import pandas_datareader as dr
 import pandas as pd
 import numpy as np
-from scipy import stats
 import yfinance as yf
+from scipy import stats
+
 
 yf.pdr_override()
 
